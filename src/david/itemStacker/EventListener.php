@@ -37,6 +37,9 @@ class EventListener implements Listener {
                     if($item->getId() === $originalItem->getId()) {
                         $e->flagForDespawn();
                         $entity->getItem()->setCount($originalItem->getCount() + $item->getCount());
+                         $entity->setNameTag($originalItem->getItem()->getName());
+    $entity->setNameTagVisible(true);
+    $entity->setNameTagAlwaysVisible(true);
                     }
                 }
             }
